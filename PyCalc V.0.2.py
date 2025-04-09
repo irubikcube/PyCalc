@@ -46,4 +46,5 @@ while True:
     elif seguir == "s":
         continue
     else:
-        print("Intentemos otra vez..")
+        print("Intente otra vez..")
+        
