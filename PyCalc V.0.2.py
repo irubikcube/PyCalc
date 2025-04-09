@@ -11,43 +11,43 @@ while True:
     print("2. Quiero Restar")
     print("3. Quiero Mulpiplicar")
     print("4. Deseo Dividir")
-    print("5. Es todo gracias, Salir")
+    print("5. Es todo gracias, quiero Salir")
     print("Selecciona una opcion")
 
     #El comando "try" hara lo que se indique que se pida
     try:
-        operacion = int(input("Favor selecciona una operación (1-5): "))
+        calcular = int(input("Favor selecciona una operación (1-5): "))
 
-        if operacion == 5:
+        if calcular == 5:
             print("Gracias por usar PyCalc!")
             break
-        elif operacion in [1, 2, 3, 4]:
+        elif calcular in [1, 2, 3, 4]:
             x = float(input("Ingresa X1: "))
             y = float(input("Ingresa X2: "))
 
-            if operacion == 1:
+            if calcular == 1:
                 resultado = x + y
-                print("Resultado de Suma es:", resultado)
-            elif operacion == 2:
+                print("Su resultado es:", resultado)
+            elif calcular == 2:
                 resultado = x - y
-                print("Resultado de Resta es:", resultado)
-            elif operacion == 3:
+                print("Su resultado es:", resultado)
+            elif calcular == 3:
                 resultado = x * y
-                print("Resultado de Multiplicación es:", resultado)
-            elif operacion == 4:
+                print("Su resultado es:", resultado)
+            elif calcular == 4:
                 if y == 0:
-                    print("Imposible Dividor por Cero. Intentemos otra cosa")
+                    print("No puede dividir por 0.")
                     continue
                 resultado = x / y
-                print("Resultado de División es:", resultado)
+                print("Su resultado es:", resultado)
         else:
-            print("Error: Debes ingresar una opción del Menú.")
-    except ValueError: ###arroja el error si es algun caracter no solicitado.
+            print("Lo siento: Debes ingresar una opción dentro del Menú.")
+    except ValueError: #arroja el error si es algun caracter no solicitado.
         print("Error: Ingresa solo números válidos.")
 
     seguir = input("¿Quieres continuar? (s/n): ").lower()
     if seguir == "n":
-        print("Hasta Pronto")
+        print("Nos vemos")
         break
     elif seguir == "s":
         continue
