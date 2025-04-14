@@ -47,7 +47,7 @@ while True:
 
     seguir = input("¿Quieres continuar? (s/n): ").lower()
     if seguir == "n":
-        print("Nos vemos")
+        print("Nos vemos, y no olvides visitar nuestro Github")
         break
     elif seguir == "s":
         continue
