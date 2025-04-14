@@ -4,8 +4,8 @@ El programa permite al usuario elegir la operación deseada y luego ingresar los
 
 """
 
-while True:  
-    #Menu de PyCalc
+while True:
+    # Menu de PyCalc
     print("Favor seleccione una Operación")
     print("1. Quiero Sumar")
     print("2. Quiero Restar")
@@ -14,7 +14,7 @@ while True:
     print("5. Es todo gracias, quiero Salir")
     print("Selecciona una opcion")
 
-    #El comando "try" hara lo que se indique que se pida
+    # El comando "try" hara lo que se indique que se pida
     try:
         calcular = int(input("Favor selecciona una operación (1-5): "))
 
@@ -42,7 +42,7 @@ while True:
                 print("Su resultado es:", resultado)
         else:
             print("Lo siento: Debes ingresar una opción dentro del Menú.")
-    except ValueError: #arroja el error si es algun caracter no solicitado.
+    except ValueError:  # arroja el error si es algun caracter no solicitado.
         print("Error: Ingresa solo números válidos.")
 
     seguir = input("¿Quieres continuar? (s/n): ").lower()
@@ -53,4 +53,3 @@ while True:
         continue
     else:
         print("Intente otra vez..")
-        
