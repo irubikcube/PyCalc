@@ -16,9 +16,31 @@ print (f"el precio total es de ${precio_unitario * cantidad:,.2f} pesos")
 #	•	.replace(",", ".") → Cambia la coma por punto, para seguir el formato chileno.
 #	•	El número 49990 en este caso representa 49.990 CLP (sin decimales).
 
-precio_unitario = 3990
-cantidad = 34
-total = precio_unitario * cantidad + iva
-iva = 0,19
+#precio_unitario = 3990
+#cantidad = 34
+#impuesto = 0,19
+#total = precio_unitario * cantidad * impuesto
 
-print(f"el precio final a pagar es de ${total:,.0f} pesos".replace (",", "."))
+#print(f"el precio final a pagar es de ${total} pesos")
+
+# Precio del producto sin IVA
+precio_sin_iva = 10000
+
+# Cantidad de productos
+cantidad = 12
+
+# Calcular total sin IVA
+total_sin_iva = precio_sin_iva * cantidad
+
+# Calcular IVA (19%)
+iva = total_sin_iva * 0.19
+
+# Calcular total con IVA
+total_con_iva = total_sin_iva + iva
+
+# Mostrar resultados formateados como pesos chilenos
+print(f"Cantidad: {cantidad} unidades")
+print(f"Precio unitario: ${precio_sin_iva:,.0f}".replace(",", "."))
+print(f"Total sin IVA: ${total_sin_iva:,.0f}".replace(",", "."))
+print(f"IVA (19%): ${iva:,.0f}".replace(",", "."))
+print(f"Total con IVA: ${total_con_iva:,.0f}".replace(",", "."))
